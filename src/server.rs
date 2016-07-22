@@ -7,13 +7,7 @@ pub fn server() {
 
     server.utilize(StaticFilesHandler::new("public/"));
 
-    // have a page that lets the user see if they were invited
-    // by typing in thier email. If it exists, it will send them
-    // the email with the confirmation link again.
-    //
-    // Calls a query to the database that matches on their email.
-    // If the email matches, the invite gets emailed to their address
-    // With the uuid needed for the confirmation click.
+    // need 'resend invite' route
 
     // Have this return a pretty page with data on it.
     server.get("/confirm/:uuid",
