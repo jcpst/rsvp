@@ -1,7 +1,9 @@
 extern crate postgres;
 extern crate uuid;
 
+use dotenv::dotenv;
 use self::postgres::{Connection, SslMode};
+use std::env;
 
 #[derive(RustcDecodable, RustcEncodable)]
 pub struct Invite {
@@ -24,8 +26,16 @@ impl Invite {
     }
 }
 
+fn env_var(var: &str) -> String {
+    match env::var(var) {
+        Ok(x) => x,
+        _ => "".to_string(),
+    }
+}
+
 fn connection() -> Connection {
-    let conn_string: &str = "postgres://postgres@localhost:5432/rsvp";
+    dotenv().ok();
+    let conn_string: &str = &env_var("POSTGRES_CONNECTION_STRING");
     Connection::connect(conn_string, SslMode::None).unwrap()
 }
 

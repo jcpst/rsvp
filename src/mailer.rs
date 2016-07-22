@@ -1,8 +1,7 @@
-extern crate dotenv;
 extern crate lettre;
 
 use queries;
-use self::dotenv::dotenv;
+use dotenv::dotenv;
 use self::lettre::email::{Email, EmailBuilder};
 use self::lettre::transport::EmailTransport;
 use self::lettre::transport::smtp::SmtpTransportBuilder;
