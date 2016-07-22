@@ -63,7 +63,7 @@ pub fn create(name: String, email: String) {
     let query: &str = "INSERT INTO invites (uuid, name, email, invited, confirmed)
                        VALUES ($1, $2, $3, false, false)";
     let id = uuid::Uuid::new_v4();
-    conn.execute(query, &[&id, &name, &email]).unwrap();
+    conn.execute(query, &[&id, &name, &email]);
 }
 
 pub fn confirm(id: uuid::Uuid) {

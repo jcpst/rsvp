@@ -63,7 +63,6 @@ TODO
 - Create a template for the email body
 - Serve a page that lets you enter your email, and if it's in the database,
   will resend the invitation.
-- If an email is already in the database, it won't create a new row.
 
 [1]: http://ditrospecta.com/node/2016/07/11/simple-rsvp-node.html
 [2]: https://www.rust-lang.org

@@ -6,7 +6,7 @@ CREATE DATABASE rsvp;
 CREATE TABLE invites (
 	uuid UUID,
 	name VARCHAR,
-	email VARCHAR,
+	email VARCHAR UNIQUE,
 	confirmed BOOLEAN,
   invited BOOLEAN
 );
