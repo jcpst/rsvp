@@ -1,0 +1,11 @@
+name: rsvp
+version: 0.1.0
+author: Joe P. <joe@jcpst.com>
+about: rsvp tool that lets folks confirm an event with a single-click in an email.
+subcommands:
+    - migrate:
+        about: Adds invitations to the database from invites.csv
+    - mailer:
+        about: Sends emails to all unconfirmed invitations.
+    - server:
+        about: Starts the server to recieve confirmations.

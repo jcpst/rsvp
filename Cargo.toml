@@ -1,0 +1,14 @@
+[package]
+name = "rsvp"
+version = "0.1.0"
+authors = ["Joseph Post <jp@jsphpst.com>"]
+
+[dependencies]
+clap = { version = "2", features = ["yaml"] }
+csv = "0.14.4"
+dotenv = "0.8"
+lettre = "0.5"
+nickel = "0.8.1"
+postgres = { version = "0.11.9", features = ["uuid"] }
+rustc-serialize = "0.3.19"
+uuid = { version = "0.2", features = ["rustc-serialize"] }
